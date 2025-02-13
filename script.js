@@ -1,6 +1,10 @@
 // script.js
 
 // Function to handle button click events
+function selectOption(choice) {
+    console.log("You selected:", choice);
+    alert("You selected: " + choice);
+}
 function selectOption(option) {
     // Check which option was clicked
     if (option === 'yes') {
