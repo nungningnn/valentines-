@@ -1,15 +1,15 @@
 // script.js
 
 // Function to handle button click events
-function selectOption(options) {
+function selectOption(option) {
     // Check which option was clicked
-    if (options === 'yes') {
+    if (option === 'yes') {
         // Flash rainbow colors
         flashRainbowColors(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
         });
-    } else if (options === 'no') {
+    } else if (option === 'no') {
         // Change text on the "No" button to "You sure?"
         document.getElementById('no-button').innerText = 'You sure?'; 
         // Increase font size of "Yes" button
@@ -19,7 +19,7 @@ function selectOption(options) {
         yesButton.style.fontSize = newSize + 'px';
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
-        alert('Invalid options!');
+        alert('Invalid option!');
     }
 }
 
@@ -72,7 +72,7 @@ function displayCatHeart() {
     catHeartImage.onload = function() {
         imageContainer.appendChild(catHeartImage);
         // Hide the options container
-        document.getElementById('options').style.display = 'none';
+        document.getElementById('option').style.display = 'none';
     };
 }
 
